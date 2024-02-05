@@ -1,0 +1,1 @@
+echo "eseguo script da $(hostname)"
