@@ -3,7 +3,7 @@ run-name: Received commit from ${{ github.actor }}, initiating DEV publishing
 on: [push]
 jobs:
   execute-powershell:
-    runs-on: windows-latest 
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v4
       with:
