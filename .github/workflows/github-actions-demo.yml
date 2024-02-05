@@ -1,5 +1,5 @@
 name: GitHub Actions Demo
-run-name: Received commit from ${{ github.actor }}, initiating DEV publishing
+run-name: Received commit from ${{ github.actor }}, initiating DEV publishing.
 on: [push]
 jobs:
   execute-powershell:
