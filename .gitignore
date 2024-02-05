@@ -293,3 +293,4 @@ actions-runner/run-helper.cmd
 actions-runner/run-helper.cmd.template
 actions-runner/run-helper.sh.template
 actions-runner/run.cmd
+*.log
