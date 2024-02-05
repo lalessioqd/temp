@@ -10,5 +10,5 @@ jobs:
         fetch-depth: 0 
 
     - name: Execute PowerShell Script
-      run: .\work\prova.ps1
+      run: .\_work\prova.ps1
       shell: pwsh 
