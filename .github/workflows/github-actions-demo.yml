@@ -10,5 +10,5 @@ jobs:
         fetch-depth: 0 
 
     - name: Execute PowerShell Script
-      run: .\temp\test.ps1
+      run: .\test.ps1
       shell: pwsh 
