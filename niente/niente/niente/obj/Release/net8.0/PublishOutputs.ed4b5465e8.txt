@@ -1,0 +1,7 @@
+C:\github\temp\niente\niente\niente\obj\Release\net8.0\PubTmp\Out\niente.exe
+C:\github\temp\niente\niente\niente\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\github\temp\niente\niente\niente\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\github\temp\niente\niente\niente\obj\Release\net8.0\PubTmp\Out\niente.dll
+C:\github\temp\niente\niente\niente\obj\Release\net8.0\PubTmp\Out\niente.deps.json
+C:\github\temp\niente\niente\niente\obj\Release\net8.0\PubTmp\Out\niente.runtimeconfig.json
+C:\github\temp\niente\niente\niente\obj\Release\net8.0\PubTmp\Out\niente.pdb

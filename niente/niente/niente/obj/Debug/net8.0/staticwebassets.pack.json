@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\github\\temp\\niente\\niente\\niente\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\niente.bundle.scp.css",
+      "PackagePath": "staticwebassets\\niente.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\github\\temp\\niente\\niente\\niente\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\github\\temp\\niente\\niente\\niente\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\github\\temp\\niente\\niente\\niente\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\github\\temp\\niente\\niente\\niente\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.niente.props",
+      "PackagePath": "build\\niente.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.niente.props",
+      "PackagePath": "buildMultiTargeting\\niente.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.niente.props",
+      "PackagePath": "buildTransitive\\niente.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.niente.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
