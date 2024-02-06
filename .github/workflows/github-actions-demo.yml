@@ -3,30 +3,28 @@ run-name: Received commit from ${{ github.actor }}, initiating DEV publishing.
 on: [push]
 jobs:
   build-and-deploy:
-    runs-on: self-hosted  # Specify that this job runs on a self-hosted runner
+    runs-on: windows-latest #giro in locale perchè tanto l'agent esisterà solo su server di test
 
     steps:
     - uses: actions/checkout@v4
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '6.0'  # Specify the .NET version you need
+        dotnet-version: '6.0'  #da verificare se va bene per tutti i progetti
 
     - name: Restore dependencies
-      run: dotnet restore niente/niente/niente.sln
-      # Restores the dependencies and tools of a project
+      run: dotnet restore niente/niente/niente.sln #non ho capito se serve
 
     - name: Build
-      run: dotnet build niente/niente/niente.sln --no-restore --configuration Release
-      # Builds the project and its dependencies
+      run: dotnet build niente/niente/niente.sln --no-restore --configuration Release # Build
 
     - name: Publish
-      run: dotnet publish niente/niente/niente.sln --no-restore --configuration Release --output ./publish
-      # Publishes the application and its dependencies to a folder for deployment
+      run: dotnet publish niente/niente/niente.sln --no-restore --configuration Release --output ./publish 
+      # Publish (di default ti trovi tutto in dovehaiinstallatoagentgithub/_work)
 
 
-    #- name: Execute Deployment Script
-      #run: powershell.exe -File ./deploy-script.ps1
-      # Runs your PowerShell deployment scr
+    #- name: Execute PowerShell Script
+      #run: .\prova.ps1 #mettere path al nostro production-deploy.ps1
+      #shell: pwsh 
+      #questo non va, da errore che manca pwsh

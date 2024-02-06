@@ -28,3 +28,4 @@ C:\github\temp\niente\niente\niente\obj\Debug\net8.0\refint\niente.dll
 C:\github\temp\niente\niente\niente\obj\Debug\net8.0\niente.pdb
 C:\github\temp\niente\niente\niente\obj\Debug\net8.0\niente.genruntimeconfig.cache
 C:\github\temp\niente\niente\niente\obj\Debug\net8.0\ref\niente.dll
+C:\github\temp\niente\niente\niente\bin\Debug\net8.0\FileName.cs
