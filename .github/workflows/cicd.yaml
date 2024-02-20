@@ -3,7 +3,7 @@ name: Config Wizard GitHub Action
 on:
   push:
     branches:
-      - github_actions
+      - main
 
 jobs:
   build-and-release:
