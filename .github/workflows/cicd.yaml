@@ -9,16 +9,28 @@ jobs:
   build-and-release:
     runs-on: self-hosted 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - name: Execute build_cw.bat
-      run: .\build_cw.bat
+    - name: Build using build_all.sh
+      run: |
+        "C:\Program Files\Git\bin\bash.exe" -c "cd /c/github/telegraf_custom/build_qmonitor && ./build_all.sh"
+
+    - name: Copy and rename telegraf executable
       shell: cmd
+      run: |
+        SET "sourceDir=/c/github/telegraf_custom/build_qmonitor"
+        SET "destDir=C:\github\QuantumMonitor\artifacts"
+        SET "pattern=telegraf_?.?.?.exe"
+        FOR /F "delims=" %%F IN ('dir "%sourceDir%\%pattern%" /B /A:-D') DO (
+          COPY "%sourceDir%\%%F" "%destDir%\telegraf.exe" /Y
+        )
 
-    - name: Upload MSI to GitHub Release
-      id: create_release
-      uses: softprops/action-gh-release@v1
-      with:
-        files: C:\github\QuantumMonitor\WixSetup\bin\Release\*.msi
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Setup Visual Studio Environment
+      shell: cmd
+      run: |
+        CALL "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
+
+    - name: Build MSI package
+      shell: powershell
+      run: |
+        powershell -ExecutionPolicy Bypass -File "C:\github\QuantumMonitor\WixSetup\buildmsi.ps1"
