@@ -25,12 +25,8 @@ jobs:
           COPY "%sourceDir%\%%F" "%destDir%\telegraf.exe" /Y
         )
 
-    - name: Setup Visual Studio Environment
+    - name: Execute buildmsi.ps1 with Visual Studio Environment
       shell: cmd
       run: |
-        CALL "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
+        CALL "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" && powershell -ExecutionPolicy Bypass -File "C:\github\QuantumMonitor\WixSetup\buildmsi.ps1"
 
-    - name: Build MSI package
-      shell: powershell
-      run: |
-        powershell -ExecutionPolicy Bypass -File "C:\github\QuantumMonitor\WixSetup\buildmsi.ps1"
